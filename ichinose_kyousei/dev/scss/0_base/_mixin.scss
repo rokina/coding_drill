@@ -1,0 +1,39 @@
+//============================================
+// サイト幅でセンタリング
+//============================================
+//@mixin center{
+//	width: $baseWidth;
+//	margin: 0 auto;
+//}
+
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+	*zoom: 1;
+	&:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+//============================================
+// フォント
+//============================================
+@mixin mincyo() {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+		"Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+@mixin mincho() {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+		"Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+//============================================
+// breakpoint
+//============================================
+@mixin sp {
+	@media screen and (max-width: #{$breakpoint1}) {
+		@content;
+	}
+}
